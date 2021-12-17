@@ -14,12 +14,6 @@ view upcoming trips, vote on lodging and activities and even split expenses!
 - [Facebook](https://fb.me/TravelCrew.KT)
 - [Twitter](https://twitter.com/TravelCrew_kt)
 
-<!-- ![App UI](/IMG_5112.PNG)
-![App UI](/IMG_5113.PNG)
-![App UI](/IMG_5114.PNG)
-![App UI](/IMG_5115.PNG)
-![App UI](/IMG_5116.PNG)
-![App UI](/IMG_5117.PNG) -->
 
 **Technologies we are using:**
 
