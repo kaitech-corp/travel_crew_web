@@ -15,7 +15,7 @@ view upcoming trips, vote on lodging and activities and even split expenses!
 - [Twitter](https://twitter.com/TravelCrew_kt)
 
 
-**Technologies we are using:**
+**Technologies we are using/will use:**
 
 - HTML
 - CSS

@@ -1,5 +1,8 @@
-const topImage = document.querySelector(".img-container");
 
-const tl = new TimelineMax();
-
-tl.fromTo(topImage,1.2, { height: 0%, {height: "100%"}, ease: Power2.easeInOut});
+const elmnt = document.getElementById('div-features');
+const container1 = document.getElementById("container-1");
+// document.getElementById("download_button").onclick = scrollToFeatures();
+// document.getElementById("download_button").onclick = function(){
+//   document.querySelector('.button-primary').style.color = 'darkorange';
+//
+// }
