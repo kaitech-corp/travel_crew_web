@@ -33,17 +33,13 @@ h3 {
 a {
   background-color: transparent;
   display: inline-flex;
+  /* padding: 10px */
 }
 
 .cls-main {
 
 }
 
-nav {
-  display: flex;
-  flex: 6;
-  justify-content: center;
-}
 
 li {
   list-style: none;
@@ -55,6 +51,7 @@ button {
 
 ion-icon {
   color: black;
+  name: "menu";
 }
 
 .color-vars {
@@ -115,6 +112,7 @@ ion-icon {
   width: 100%;
   position: relative;
 }
+
 
 .container-1{
   display: flex;
@@ -194,7 +192,7 @@ ion-icon {
 }
 
 .header-1{
-  position: static;
+  position: relative;
   z-index: 2;
   width: 100%;
   height: 104px;
@@ -216,9 +214,9 @@ ion-icon {
 }
 
 .div-aad {
-  display: flex;
+  display: inline-block;
   padding: 15px 0;
-  flex: 2;
+  flex: 1;
   justify-content: flex-end;
   align-items: center;
 }
@@ -324,6 +322,14 @@ ion-icon {
   flex-direction: row
 }
 
+@media (max-width: 900px) {
+  .div-body-row {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column
+  }
+}
+
 .div-flex-start {
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
@@ -404,46 +410,55 @@ ion-icon {
   max-width: 1180px;
   margin: 0 auto;
   display: flex;
-  align-items: stretch;
-  padding: 0 20px;
+  flex-direction: row;
   box-sizing: content-box;
 }
 
-.nav-content2 {
-  display: block;
-}
 
 .nav-icon {
   display: none;
 }
 .downloadButton{
-  width: 100%;
+display: inline-flex;
 }
 
-/* .nav-bar {
-  overflow: hidden;
-} */
+.nav-bar {
+  overflow: visible;
+  display: flex;
+  flex: 5
+}
 
-.nav-bar h3 {
+.nav-bar a {
   float: left;
-  display: block;
-  text-align: center;
-  padding: 14px 16px;
+  display: inline-block;
+  text-align: left;
+  line-height: 15px;
+  /* padding: 14px 16px; */
   text-decoration: none;
   font-size: 17px;
+  /* background: white; */
 }
 
-@media screen and (max-width: 900px){
+.nav-bar.responsive a:hover {text-decoration: underline;;}
+
+.added-items:focus {
+  display: none;
+}
+
+@media only screen and (max-width: 900px){
   .nav-content: {
     display: none;
   }
   .downloadButton{
-    display: none;
+    display: block;
+  }
+  .added-items {
+    display: contents;
   }
 }
 
 @media screen and (max-width: 900px){
-  .nav-bar h3 {
+  .nav-bar a {
     display: none;
   }
   .nav-icon {
@@ -452,25 +467,29 @@ ion-icon {
   }
 }
 
-@media screen and (max-width: 900px) {
-  .nav-bar.responsive {position: relative;}
+@media screen and (max-width: 900px){
+  .nav-bar.responsive {
+    position: relative;
+    /* display: block; */
+    flex-direction: column;
+  }
   .nav-bar.responsive .nav-icon {
     position: absolute;
     right: 0;
     top: 0;
   }
-  .nav-bar.responsive h3{
-    float: none;
+  .nav-bar.responsive a{
+    float: left;
     display: block;
     text-align: left;
     /* background-color: antiquewhite; */
   }
 }
 
-.nav-c-a {
+/* .nav-c-a {
   line-height: 15px;
   display: inline-flex;
-}
+} */
 
 .nav-c-bar {
   display: flex;
@@ -502,24 +521,23 @@ ion-icon {
   background-color: #0052FF;
 }
 
-.title-aaa {
-  margin: 0 18px;
-  display: inline-flex;
-  align-items: center;
-  cursor: default;
-  box-shadow: 0;
-  position: relative;
-}
 
 .title-aab {
   margin: 0 18px;
-  display: inline-flex;
   align-items: center;
-  cursor: default;
-  box-shadow: 0;
   position: relative;
   cursor: pointer;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
 }
+
+@media screen and (max-width: 900px){
+  .title-aab {
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+  }
+}
+
 .nav-title-name {
   margin: 0;
   font-size: 18px;
@@ -599,6 +617,20 @@ ion-icon {
   border-top: 1px solid #e7e8f1;
 }
 
+.mobile-footer {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-top: 1px solid #e7e8f1;
+  display: none;
+}
+
+@media screen and (max-width: 900px){
+  .mobile-footer {
+    display: contents;
+  }
+}
+
 .footer-logo {
   width: 140px;
 }
@@ -621,6 +653,13 @@ ion-icon {
   line-height: 68px;
   font-weight: 400;
   /* font-family: monospace; */
+}
+
+@media screen and (max-width: 900px){
+  .display-title-1 {
+    font-size: 37px;
+    line-height: 40px;
+  }
 }
 
 .display-title-2 {
@@ -650,7 +689,7 @@ ion-icon {
   line-height: 28px;
   font-weight: 400;
   /* font-family: monospace; */
-  color: slategray;
+  color: mediumslateblue;
 }
 
 .display-text-testimonial {
@@ -691,6 +730,13 @@ ion-icon {
   color: black;
 }
 
+/* @media screen and (max-width: 900px){
+  .display-text-3 {
+    font-size: 6vw;
+    line-height: 9vw;
+  }
+} */
+
 .display-text-4 {
   font-size: 17px;
   line-height: 24px;
@@ -716,6 +762,14 @@ ion-icon {
 
 .padding-5-left {
   padding-left: var(--padding-5)
+}
+
+.padding-1-right {
+  padding-right: var(--padding-1)
+}
+
+.padding-2-right {
+  padding-right: var(--padding-2)
 }
 
 .padding-3-right {
@@ -792,6 +846,12 @@ ion-icon {
 
 .text-align-start {
   text-align: start
+}
+
+@media screen and (max-width:900px) {
+  .text-align-start {
+    text-align: center;
+  }
 }
 
 .text-align-end {
@@ -918,66 +978,30 @@ ion-icon {
   max-width: 100px;
 }
 
-/*!sc*/
-@media screen and (max-width:1090px) {
-  .img-1 {
-    min-width: auto;
-    height: 680px;
-  }
+.feature-img {
+  width: 45%;
 }
 
-/*!sc*/
-@media (max-width:768px) {
-  .img-1 {
-    height: 350px;
-  }
-
-  .img-1 img {
-    max-width: unset;
-    position: relative;
-    bottom: -140px;
-  }
+.feature-text {
+  width: 55%;
 }
 
-/*!sc*/
-@media (max-width:560px) {
+@media screen and (max-width:900px){
+  .img-width-50 {
+    width: auto;
+  }
+  .feature-img {
+    width: auto;
+  }
+  .feature-text {
+    width: auto;
+  }
   .img-1 {
+    width: auto;
     height: auto;
-    margin-top: 0;
-  }
-
-  .img-1 img {
-    position: unset;
-    max-width: 475px;
   }
 }
 
-/*Mobile devices*/
-@media (max-width:320px) {
-  .img-1 {
-    height: auto;
-    margin-top: 0;
-  }
-
-  .img-1 img {
-    position: unset;
-    max-width: 107px;
-  }
-
-  .img-download-google {
-    width: 75px;
-    height: 25px;
-  }
-
-  .img-download-apple {
-    width: 75px;
-    height: 25px;
-  }
-
-  .div-body-row {
-
-  }
-}
 
 
 
@@ -992,18 +1016,12 @@ ion-icon {
   list-style: none;
 }
 /*!sc*/
-@media (max-width:768px) {
-  .layout-grid {
-    grid-template-columns: repeat(1, 1fr);
+@media (max-width:900px) {
+  .layout-grid-highlights {
+    display: block;
   }
 }
 
-/*!sc*/
-@media (max-width:560px) {
-  .layout-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
 
 .layout-grid-socials {
   display: -ms-grid;
@@ -1029,16 +1047,10 @@ ion-icon {
 }
 
 /*!sc*/
-@media (max-width:768px) {
+@media (max-width:900px) {
   .layout-grid-testomonial {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/*!sc*/
-@media (max-width:560px) {
-  .layout-grid-testomonial {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    /* margin: 25px */
   }
 }
 
@@ -1082,7 +1094,7 @@ ion-icon {
 .footer-link.w--current {
   color: #387aec;
   line-height: 1.688em;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .footer-list-item {
@@ -1162,6 +1174,13 @@ ion-icon {
 .w-inline-block {
   max-width: 100%;
   display: inline-block
+}
+
+/*!sc*/
+@media (max-width:900px) {
+  .footer {
+    display: none;
+  }
 }
 
 
@@ -1261,4 +1280,112 @@ ion-icon {
     -ms-transform: translateY(0);
     transform: translateY(0);
   }
+}
+
+/*Slideshow*/
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/*!sc*/
+@media (min-width:900px) {
+  .mySlides {
+    display: block;
+  }
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/*!sc*/
+@media (min-width:900px) {
+  .dot {
+    display: none;
+  }
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2.5s;
+  animation-name: fade;
+  animation-duration: 2.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
