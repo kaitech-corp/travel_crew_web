@@ -322,6 +322,12 @@ ion-icon {
   flex-direction: row
 }
 
+.div-body-social-row {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row
+}
+
 @media (max-width: 900px) {
   .div-body-row {
     -webkit-flex-direction: column;
