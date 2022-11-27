@@ -322,12 +322,6 @@ ion-icon {
   flex-direction: row
 }
 
-.div-body-social-row {
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row
-}
-
 @media (max-width: 900px) {
   .div-body-row {
     -webkit-flex-direction: column;
@@ -695,7 +689,7 @@ display: inline-flex;
   line-height: 28px;
   font-weight: 400;
   /* font-family: monospace; */
-  color: mediumslateblue;
+  color: blue;
 }
 
 .display-text-testimonial {
@@ -1394,4 +1388,68 @@ display: inline-flex;
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+
+.waitListPopup {
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+.formPopup {
+  display: none;
+  position: fixed;
+  left: 45%;
+  top: 5%;
+  transform: translate(-50%, 5%);
+  border: 3px solid #999999;
+  z-index: 9;
+}
+.formContainer {
+  max-width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  /* border-radius: 15px; */
+}
+
+.formMobile {
+  display: none;
+}
+
+@media screen and (max-width:900px) {
+  .formContainer {
+    padding: 0;
+    max-width: 50vw;
+  }
+}
+.formContainer input[type=email],
+.formContainer input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 20px 0;
+  border: none;
+  background: #eee;
+}
+.formContainer input[type=email]:focus,
+.formContainer input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+.formContainer .btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 15px;
+  background-color: #8ebf42;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 15px;
+  opacity: 0.8;
+}
+.formContainer .cancel {
+  background-color: #cc0000;
+}
+.formContainer .btn:hover,
+.openButton:hover {
+  opacity: 1;
 }

@@ -5,12 +5,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="/images/favicon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <title>Travel Crew</title>
 </head>
 
 <body>
+  <script defer type="module" src="firebase_services.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -31,7 +33,7 @@
       <header class="header-1">
         <div class="div-aab ">
           <div class="div-aac">
-            <div class="banner">
+            <div class="banner" id="banner-1">
               <span class="banner-a">Join the wait list for special access to Travel-Chain→</span>
             </div>
             <div class="nav-content">
@@ -41,20 +43,20 @@
                 </a>
               </div>
               <nav class="nav-bar" id="responsiveNavID">
-                <a class="added-items" style="display:none;">
+                <a>
                   <ul class="div-body div-body-social-row div-body-space-evenly">
                     <li class="padding-1-right">
-                      <a href="https://fb.me/TravelCrew.KT">
+                      <a class="added-items" style="display:none;" href="https://fb.me/TravelCrew.KT">
                         <img src="images/fb_small.png" alt="">
                       </a>
                     </li>
                     <li class="padding-1-right">
-                      <a href="https://twitter.com/TravelCrew_kt">
+                      <a class="added-items" style="display:none;" href="https://twitter.com/TravelCrew_kt">
                         <img src="images/tw_small.png" alt="">
                       </a>
                     </li>
                     <li class="padding-1-right">
-                      <a href="https://www.instagram.com/travelcrew_kt">
+                      <a class="added-items" style="display:none;" href="https://www.instagram.com/travelcrew_kt">
                         <img src="images/insta_small.png" alt="">
                       </a>
                     </li>
@@ -85,7 +87,7 @@
         </div>
       </header>
       <!-- About Section -->
-      <div class="page-layout">
+      <div class="page-layout" id="page-layout">
         <main class="page-layout">
           <div class="div-body div-body-col div-body-center padding-4-left padding-4-right padding-5-top padding-4-bottom" style="width:100%">
             <p class="display-text-2 div-color-foreground text-align-center">
